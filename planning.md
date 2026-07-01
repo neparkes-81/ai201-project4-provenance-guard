@@ -1,9 +1,4 @@
-<!-- Architecture diagram → put it in planning.md. Include it under an ## Architecture section.  -->
-<!-- detection pipeline must use at least 2 distinct signals to classify content. -->
-<!-- Your system must return a confidence score, not just a binary label. The score should reflect genuine uncertainty — a 0.51 confidence should produce a meaningfully different transparency label than a 0.95. -->
- <!-- Implement a mechanism for creators to contest a classification. At minimum, an appeal must: capture the creator's reasoning, log the appeal alongside the original decision, and update the content's status to "under review." Automated re-classification is not required. -->
- <!-- Implement rate limiting on your submission endpoint.  -->
-  <!-- Audit log - including confidence score, signals used, and any appeals — must be captured in a structured audit log. Document the log in your README (or via the GET /log output) with at least 3 entries visible. -->
+
 
 ## Description
 This project is Provenance Guard, a backend system that any platform where people share original creative work — writing, music, art, etc. - could plug into to classify submitted content on a scale of likely human to likely AI. The system scores confidence in that classification and produces a user-level transparency label on the UI. This system also handle appeals from creators who believe they've been misclassified.
